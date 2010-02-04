@@ -1,0 +1,60 @@
+# -*- lisp -*-
+#
+# basic operator tests
+#
+
+#-------------------------------------------------------------------------------
+# arithmetic operators
+#-------------------------------------------------------------------------------
+(print (+ 1 2))
+(print (+ 1.1 2.2))
+(print (+ 1 -2))
+(print (- 1 2))
+
+(print (* 1 2))
+(print (* 1.1 2.2))
+(print (* "STR " 9))
+
+(print (% 100 3))
+
+#-------------------------------------------------------------------------------
+# arithmetic operators
+#-------------------------------------------------------------------------------
+(print (% "string format: %s" "one"))
+(print (% "string format: %s %s %s" "one" "two" "three"))
+
+#-------------------------------------------------------------------------------
+# iteration operators
+#-------------------------------------------------------------------------------
+(for x y (list (list 1 2) (list 3 4))
+     (print (% "x is %s and y is %s" x y)))
+
+(:= x 10)
+(while (> x 1)
+  (:= x (- x 1))
+  (print x))
+
+#-------------------------------------------------------------------------------
+# indexing operators
+#-------------------------------------------------------------------------------
+(:= a (list 1 2 3 4))
+(print (@ a 1))
+(print (@ a 1 -1))
+
+#-------------------------------------------------------------------------------
+# boolean operators
+#-------------------------------------------------------------------------------
+(if true
+    (print "true is true"))
+(if false
+    (print "false is true"))
+(if (and true true)
+    (print "true and true is true"))
+(if (and true false)
+    (print "true and false is true")
+    (print "true and false is false"))
+(if (or true false)
+    (print "true or false is true"))
+(if (or false false)
+    (print "false or false is true")
+    (print "false or false is false"))

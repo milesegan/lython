@@ -1,0 +1,10 @@
+(import os)
+
+(:= out "/tmp/lythontest")
+(if (os.path.exists out)
+    (os.unlink out)
+  (print "target file does not exist"))
+
+(:= f (open "/tmp/lythontest" "w+"))
+(f.write "Hello World from Lython!")
+(f.close)

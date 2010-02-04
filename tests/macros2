@@ -1,0 +1,7 @@
+# -*- lisp -*-
+
+(defmacro tmac (a b)
+  (* ,a ,b))
+
+(print (tmac 1 2))
+(print (tmac (+ 1 1) (+ 2 2)))

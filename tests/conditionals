@@ -1,0 +1,16 @@
+# -*- lisp -*-
+# test conditionals
+
+(if (= 1 1)
+    (print "1 is 1"))
+
+(if (= 1 1)
+    (print "yes")
+    (print "no"))
+
+(:= x 
+    (if (= 1 2)
+        1
+      2))
+
+(print x)

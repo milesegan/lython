@@ -1,0 +1,19 @@
+# -*- lisp -*-
+
+(defmacro foo () (* 10 10))
+(print (foo))
+
+
+(defmacro bar ()
+  (print "X IS ")
+  (print x))
+(:= x 10)
+(bar)
+
+(defmacro baz ()
+  (:= x 10)
+  (while (> x 1)
+    (:= x (- x 1))
+    (bar)))
+(baz)
+
